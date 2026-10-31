@@ -20,7 +20,7 @@ All three recorded runs use Adam (`lr=1e-4`), batch size 8, five epochs, and sel
 
 These values are transcribed from the saved output of the **original** notebook, [`original/dl2-hw3.ipynb`](original/dl2-hw3.ipynb). The original incorrectly logged `num_blocks_unet=4` while constructing a three-block model. It also reported `test_loss (Dice): 2.1893`, but that value was actually computed with `BCEWithLogitsLoss`. The revised [`unet_people.ipynb`](unet_people.ipynb) fixes the configuration label and Dice test criterion, replaces Kaggle-specific data/checkpoint paths with local paths, and clears old outputs. The classification of the historical IoU and soft Dice values is unchanged. The revised notebook has **not** been rerun; its corrected Dice test loss has no verified numeric value.
 
-The image below was extracted from the original BCE test visualization. It shows a test photograph, ground-truth mask, predicted probability map, and thresholded prediction. Confirm the course dataset's redistribution terms before publishing this sample.
+The image below was extracted from the original BCE test visualization. It shows a test photograph, ground-truth mask, predicted probability map, and thresholded prediction. The underlying course dataset is not included.
 
 ![Original BCE test segmentation example](results/bce_prediction_sample.png)
 
@@ -44,4 +44,4 @@ Execute the notebook in order. Torchvision downloads pretrained VGG13 weights on
 - [Simonyan and Zisserman, VGG (2014)](https://arxiv.org/abs/1409.1556)
 - [Torchvision VGG13 weights](https://pytorch.org/vision/stable/models/generated/torchvision.models.vgg13.html)
 
-The notebook contains assignment prompts and student-completed cells. Exact line-by-line authorship cannot be established from the artifact alone. Course rules and the dataset's redistribution terms should be checked before public release.
+The notebook contains assignment prompts and student-completed cells. Exact line-by-line authorship cannot be established from the artifact alone. The owner authorized public release of this completed assignment; the supplied course materials did not state the dataset's redistribution terms.
